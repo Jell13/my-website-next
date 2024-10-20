@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import About from "./sections/About";
 import Hero from "./sections/Hero";
+import NavBar from "./components/NavBar";
+import Layout from "./animation/Layout";
 
 export default function Home() {
   
@@ -19,6 +21,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <NavBar/>
       <Hero/>
       <About/>
     </div>
