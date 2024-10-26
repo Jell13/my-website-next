@@ -26,13 +26,12 @@ const Hero = () => {
       [1, 0.95]
     )
     const DURATION = 0.6;
-    const STAGGER = 0.15;
+    const STAGGER = 0.1;
 
   return (
     
     <motion.section 
-    // style={{opacity: opacity}}
-    className='h-screen grainy z[-1] pb-10'>
+    className='h-screen z[-1] pb-10'>
       <motion.div 
       style={{y: translate, scale: scaleDown, opacity: opacity}}
       className='w-full h-full flex justify-center items-center px-10'>
@@ -48,7 +47,7 @@ const Hero = () => {
                   delay: STAGGER * i,
                   ease: "easeInOut"
                 }}
-                className='lg:text-[7rem] md:text-[5rem] tracking-tighter font-genSans'>
+                className='lg:text-[7rem] md:text-[5rem] tracking-tighter font-genSans font-medium'>
                   {letter}
                 </motion.span>
               ))}
