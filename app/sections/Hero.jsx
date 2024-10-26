@@ -31,10 +31,10 @@ const Hero = () => {
   return (
     
     <motion.section 
-    style={{opacity: opacity}}
+    // style={{opacity: opacity}}
     className='h-screen grainy z[-1] pb-10'>
       <motion.div 
-      style={{y: translate, scale: scaleDown}}
+      style={{y: translate, scale: scaleDown, opacity: opacity}}
       className='w-full h-full flex justify-center items-center px-10'>
         <div className='w-full flex flex-col items-center justify-center gap-3 mt-20'>
             <div className=''>
