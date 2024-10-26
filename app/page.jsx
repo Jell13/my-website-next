@@ -1,29 +1,37 @@
 "use client"
 
-import Image from "next/image";
-import { useEffect } from "react";
-import Lenis from "lenis";
-import About from "./sections/About";
-import Hero from "./sections/Hero";
-import NavBar from "./components/NavBar";
-import Layout from "./animation/Layout";
+import { useState } from 'react'
+import { ReactLenis } from 'lenis/dist/lenis-react'
+import Hero from './sections/Hero'
+import NavBar from './components/NavBar'
+import { AnimatePresence, motion } from 'framer-motion'
+import Loader from './components/Loader'
+import Services from './sections/Services'
 
-export default function Home() {
+function App() {
   
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  })
+  const[loading, setLoading] = useState(true)
 
   return (
-    <div className="min-h-screen">
-      <NavBar/>
-      <Hero/>
-      <About/>
-    </div>
-  );
+    <>
+
+      <AnimatePresence>
+      {loading ? (
+        <motion.div>
+          <Loader setLoading={setLoading}/>
+        </motion.div>
+      ) : (
+        <>
+          <ReactLenis root>
+            <NavBar/>
+            <Hero/>
+            <Services/>
+          </ReactLenis>
+        </>
+      )}
+      </AnimatePresence>
+    </>
+  )
 }
+
+export default App
