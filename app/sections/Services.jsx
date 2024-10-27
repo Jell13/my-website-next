@@ -6,9 +6,9 @@ import React, { useEffect, useRef } from 'react'
 
 const Services = () => {
 
-  const aboutRef = useRef()
+  const serviceRef = useRef()
 
-  const isInView = useInView(aboutRef, {once: true, margin: "-100px"})
+  const isInView = useInView(serviceRef, {once: true, margin: "-100px"})
 
   const wordVariants = {
     hidden: {y: 50, opacity: 0},
@@ -23,10 +23,6 @@ const Services = () => {
     }
   }
 
-  useEffect(() => {
-    console.log(isInView ? "it is in view" : "it is not in view")
-  }, [isInView])
-
   const title = [
     "WHAT",
     "I",
@@ -36,10 +32,10 @@ const Services = () => {
 
 
   return (
-    <section id="services" className='rounded-3xl bg-secondary text-primary'>
-      <div className='flex flex-col z-10 mb-8 md:px-10 py-20'>
+    <section id="services" className='rounded-t-3xl border-none bg-secondary text-primary'>
+      <div className='flex flex-col z-10 md:px-10 py-20'>
         <motion.h2 
-        ref={aboutRef}
+        ref={serviceRef}
         variants={staggerChildren} 
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -64,7 +60,7 @@ const Services = () => {
           </div>
         </div>
         <div className='w-full pt-10'>
-          <div className='mt-12 flex flex-col pt-6 justify-between'>
+          <div className='mt-12 flex flex-col pt-6 gap-y-16 justify-between'>
              {/* First Service */}
              <div className='sticky top-[20vh] border-t border-t-[#3f3f38] mb-[17.25em] bg-secondary'>
                 <div className='flex md:grid grid-cols-12 items-center justify-between pt-10'>
@@ -88,7 +84,7 @@ const Services = () => {
               </div>
 
               {/* Second Service */}
-              <div className='sticky top-[calc(20vh+7.75em)] border-t border-t-[#3f3f38] mb-[10.5em] bg-secondary'>
+              <div className='sticky top-[calc(20vh+7.75em)] border-t border-t-[#3f3f38] mb-[11.5em] bg-secondary'>
                 <div className='flex md:grid grid-cols-12 items-center justify-between pt-10'>
                   <span className='col-span-2 text-4xl font-medium'>
                     (02)
@@ -110,7 +106,7 @@ const Services = () => {
               </div>
 
               {/* Third Service */}
-              <div className='sticky top-[calc(20vh+1.75em)] border-t border-t-[#3f3f38] mb-[3.75em] bg-secondary'>
+              <div className='sticky top-[calc(20vh+11.5em)] border-t border-t-[#3f3f38] mb-[5.75em] bg-secondary'>
                 <div className='flex md:grid grid-cols-12 items-center justify-between pt-10'>
                   <span className='col-span-2 text-4xl font-medium'>
                     (03)
@@ -131,7 +127,6 @@ const Services = () => {
                 </div>
               </div>
           </div>
-
         </div>
       </div>
     </section>

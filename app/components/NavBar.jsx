@@ -38,8 +38,8 @@ const NavBar = () => {
         },
         {
             id: 2,
-            name: "About",
-            link: "#projects"
+            name: "Works",
+            link: "#works"
         }
     ]
 

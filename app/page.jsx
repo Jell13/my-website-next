@@ -7,6 +7,7 @@ import NavBar from './components/NavBar'
 import { AnimatePresence, motion } from 'framer-motion'
 import Loader from './components/Loader'
 import Services from './sections/Services'
+import Works from './sections/Works'
 
 function App() {
   
@@ -26,6 +27,7 @@ function App() {
             <NavBar/>
             <Hero/>
             <Services/>
+            <Works/>
           </ReactLenis>
         </>
       )}
