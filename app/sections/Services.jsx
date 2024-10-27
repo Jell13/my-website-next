@@ -36,7 +36,7 @@ const Services = () => {
 
 
   return (
-    <section id="services" className='rounded-3xl bg-black text-primary'>
+    <section id="services" className='rounded-3xl bg-secondary text-primary'>
       <div className='flex flex-col z-10 mb-8 md:px-10 py-20'>
         <motion.h2 
         ref={aboutRef}
@@ -64,50 +64,52 @@ const Services = () => {
           </div>
         </div>
         <div className='w-full pt-10'>
-
-          {/* First Service */}
-          <div className='mt-12 flex flex-col pt-6 justify-between text-left sticky top-0 border-t-[1px] border-primary'>
-            <div className='flex md:grid grid-cols-12 items-center justify-between'>
-              <span className='col-span-2 text-4xl font-medium'>
-                (01)
-              </span>
-              <h3 className='col-span-6 col-start-6 text-5xl font-medium'>
-                Web Development
-              </h3>
-            </div>
-            <div className='md:grid flex grid-cols-12'>
-              <div className='w-full flex flex-col col-span-7 col-start-6 pt-10'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora odio ratione, quas aspernatur repudiandae delectus, adipisci sapiente voluptatibus qui reprehenderit officiis ex, minima sit velit aut quae veniam possimus ea?</p>
-                <div className='flex flex-col pt-6 divide-y divide-primary'>
-                  <span>NextJs</span>
-                  <span>TailwindCSS</span>
-                  <span>React</span>
+          <div className='mt-12 flex flex-col pt-6 justify-between'>
+             {/* First Service */}
+             <div className='sticky top-[20vh] z-0 border-t border-t-[#3f3f38] mb-[17.25em] bg-secondary'>
+                <div className='flex md:grid grid-cols-12 items-center justify-between pt-10'>
+                  <span className='col-span-2 text-4xl font-medium'>
+                    (01)
+                  </span>
+                  <h3 className='col-span-6 col-start-6 text-5xl font-medium'>
+                    Web Development
+                  </h3>
+                </div>
+                <div className='md:grid flex grid-cols-12'>
+                  <div className='w-full flex flex-col col-span-7 col-start-6 pt-10'>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora odio ratione, quas aspernatur repudiandae delectus, adipisci sapiente voluptatibus qui reprehenderit officiis ex, minima sit velit aut quae veniam possimus ea?</p>
+                    <div className='flex flex-col pt-6 divide-y divide-[#3f3f38]'>
+                      <span>NextJs</span>
+                      <span>TailwindCSS</span>
+                      <span>React</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Second service */}
-          <div className='mt-12 flex flex-col pt-6 justify-between text-left sticky top-0 border-t-[1px] border-primary'>
-            <div className='flex md:grid grid-cols-12 items-center justify-between'>
-              <span className='col-span-2 text-4xl font-medium'>
-                (01)
-              </span>
-              <h3 className='col-span-6 col-start-6 text-5xl font-medium'>
-                Web Development
-              </h3>
-            </div>
-            <div className='md:grid flex grid-cols-12'>
-              <div className='w-full flex flex-col col-span-7 col-start-6 pt-10'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora odio ratione, quas aspernatur repudiandae delectus, adipisci sapiente voluptatibus qui reprehenderit officiis ex, minima sit velit aut quae veniam possimus ea?</p>
-                <div className='flex flex-col pt-6 divide-y divide-primary'>
-                  <span>NextJs</span>
-                  <span>TailwindCSS</span>
-                  <span>React</span>
+              {/* Second Services */}
+              <div className='sticky top-[calc(20vh+5.75em)] border-t z-10 border-t-[#3f3f38] mb-[17.25em] bg-secondary'>
+                <div className='flex md:grid grid-cols-12 items-center justify-between pt-10'>
+                  <span className='col-span-2 text-4xl font-medium'>
+                    (01)
+                  </span>
+                  <h3 className='col-span-6 col-start-6 text-5xl font-medium'>
+                    Web Development
+                  </h3>
+                </div>
+                <div className='md:grid flex grid-cols-12'>
+                  <div className='w-full flex flex-col col-span-7 col-start-6 pt-10'>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora odio ratione, quas aspernatur repudiandae delectus, adipisci sapiente voluptatibus qui reprehenderit officiis ex, minima sit velit aut quae veniam possimus ea?</p>
+                    <div className='flex flex-col pt-6 divide-y divide-[#3f3f38]'>
+                      <span>NextJs</span>
+                      <span>TailwindCSS</span>
+                      <span>React</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
+
         </div>
       </div>
     </section>

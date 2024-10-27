@@ -48,10 +48,10 @@ const NavBar = () => {
     variants={variant}
     initial="initial"
     animate="animate"
-    className='w-full absolute py-8 md:px-10 px-4 flex inset-x-0 z-10 justify-between items-center'>
+    className='w-full absolute py-8 md:px-10 px-4 flex inset-x-0 z-10 justify-between items-center text-third'>
       <div className='flex flex-col md:flex-row md:gap-7 md:items-center'>
         <div className='flex items-center'>
-        <span>&#169;</span><p className='text-lg font-semibold tracking-tighter'>Code By Jason</p>
+        <span>&#169;</span><p className='text-lg font-semibold tracking-tighter text-secondary'>Code By Jason</p>
         </div>
         <p className='opacity-85 tracking-tighter'>(Web & Software Developer)</p>
       </div>
@@ -61,7 +61,7 @@ const NavBar = () => {
             className='relative group'
             key={id} href={link}>
                 {name}
-                <span className='border-b-2 absolute border-black w-0 duration-300 group-hover:w-full left-0'>&nbsp;</span>
+                <span className='border-b-2 absolute border-third w-0 duration-300 group-hover:w-full left-0'>&nbsp;</span>
             </a>
         ))}
       </nav>

@@ -31,12 +31,12 @@ const Hero = () => {
   return (
     
     <motion.section 
-    className='h-screen z[-1] pb-10'>
+    className='h-screen z[-1] pb-10 text-secondary'>
       <motion.div 
       style={{y: translate, scale: scaleDown, opacity: opacity}}
       className='w-full h-full flex justify-center items-center px-10'>
         <div className='w-full flex flex-col items-center justify-center gap-3 mt-20'>
-            <div className=''>
+            <div>
               {"JASON SUGIHARTO".split("").map((letter, i) => (
                 <motion.span 
                 key={i}
@@ -47,7 +47,7 @@ const Hero = () => {
                   delay: STAGGER * i,
                   ease: "easeInOut"
                 }}
-                className='lg:text-[7rem] md:text-[5rem] tracking-tighter font-genSans font-medium'>
+                className='lg:text-[7rem] md:text-[5rem] tracking-tighter font-genSans text-secondary font-medium'>
                   {letter}
                 </motion.span>
               ))}
@@ -60,7 +60,7 @@ const Hero = () => {
               }}}
               className='flex col-span-4 flex-col justify-center items-center'>
                 <div className='w-[30ch]'>
-                  <p className='text-lg'>Crafting sleek, responsive front-end experiences that turn ideas into interactive, user-friendly interfaces. Every pixel matters, and every line of code drives results.</p>
+                  <p className='text-lg text-third'>Crafting sleek, responsive front-end experiences that turn ideas into interactive, user-friendly interfaces. Every pixel matters, and every line of code drives results.</p>
                 </div>
               </motion.div>
               <div className='col-span-4 flex justify-center items-center'>
@@ -68,7 +68,7 @@ const Hero = () => {
               </div>
               <div className='flex flex-col items-end col-span-4 justify-end'>
                 <div>
-                  <p>Available for work</p>
+                  <p className='text-fourth'>Available for work</p>
                 </div>
               </div>
             </div>
