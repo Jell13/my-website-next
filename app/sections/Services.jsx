@@ -33,7 +33,7 @@ const Services = () => {
 
   return (
     <section id="services" className='rounded-t-3xl border-none bg-secondary text-primary'>
-      <div className='flex flex-col z-10 md:px-10 py-20'>
+      <div className='flex flex-col md:px-10 py-20'>
         <motion.h2 
         ref={serviceRef}
         variants={staggerChildren} 

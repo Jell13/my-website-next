@@ -66,11 +66,16 @@ const Hero = () => {
               <div className='col-span-4 flex justify-center items-center'>
                 <motion.img layoutId='main-image' transition={{ease: [0.6, 0.01, -0.05, 0.9], duration: 1.3}} className='object-contain h-[250px] bg-inherit' src="./myhero.png"/>
               </div>
-              <div className='flex flex-col items-end col-span-4 justify-end'>
+              <motion.div 
+              initial={{opacity: 0}}
+              animate={{opacity: 1, transition:{
+                duration: 1.3
+              }}}
+              className='flex flex-col items-end col-span-4 justify-end'>
                 <div>
                   <p className='text-fourth'>Available for work</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
         </div>
       </motion.div>
