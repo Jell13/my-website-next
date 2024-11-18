@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     
     <motion.section 
-    className='h-screen z[-1] pb-10 text-secondary'>
+    className='h-screen z-[-1] pb-10 text-secondary'>
       <motion.div 
       style={{y: translate, scale: scaleDown, opacity: opacity}}
       className='w-full h-full flex justify-center items-center px-10'>
@@ -47,23 +47,23 @@ const Hero = () => {
                   delay: STAGGER * i,
                   ease: "easeInOut"
                 }}
-                className='lg:text-[7rem] md:text-[5rem] tracking-tighter font-genSans text-secondary font-medium'>
+                className='lg:text-[7rem] md:text-[5rem] text-[3rem] tracking-tighter font-genSans text-secondary font-medium'>
                   {letter}
                 </motion.span>
               ))}
             </div>
-            <div className='w-full mt-10 relative grid grid-cols-12 justify-between'>
+            <div className='w-full mt-10 relative grid md:grid-cols-12 grid-cols-6 justify-between items-center'>
               <motion.div 
               initial={{opacity: 0}}
               animate={{opacity: 1, transition:{
                 duration: 1.3
               }}}
-              className='flex col-span-4 flex-col justify-center items-center'>
+              className='flex col-span-4 flex-col justify-center items-center pl-10'>
                 <div className='w-[30ch]'>
                   <p className='text-lg text-third'>Crafting sleek, responsive front-end experiences that turn ideas into interactive, user-friendly interfaces. Every pixel matters, and every line of code drives results.</p>
                 </div>
               </motion.div>
-              <div className='col-span-4 flex justify-center items-center'>
+              <div className='md:col-span-4 col-span-3 flex justify-center md:items-start items-center'>
                 <motion.img layoutId='main-image' transition={{ease: [0.6, 0.01, -0.05, 0.9], duration: 1.3}} className='object-contain h-[250px] bg-inherit' src="./myhero.png"/>
               </div>
               <motion.div 
@@ -71,7 +71,7 @@ const Hero = () => {
               animate={{opacity: 1, transition:{
                 duration: 1.3
               }}}
-              className='flex flex-col items-end col-span-4 justify-end'>
+              className='flex flex-col items-end md:col-span-4 col-span-3 justify-end'>
                 <div>
                   <p className='text-fourth'>Available for work</p>
                 </div>

@@ -33,13 +33,13 @@ const Services = () => {
 
   return (
     <section id="services" className='rounded-t-3xl border-none bg-secondary text-primary'>
-      <div className='flex flex-col md:px-10 py-20'>
+      <div className='flex flex-col md:px-10 py-20 px-4'>
         <motion.h2 
         ref={serviceRef}
         variants={staggerChildren} 
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className='text-primary lg:text-[6rem] md:text-[4rem]'>
+        className='text-primary lg:text-[6rem] md:text-[4rem] text-[3rem]'>
           {title.map((word, i) => (
             <motion.span 
             key={i}

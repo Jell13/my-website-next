@@ -93,9 +93,11 @@ function NavBarFixed () {
 }
 
 function NavBarScroll () {
+
+  
   return (
-    <header>
-      
+    <header className='text-black text-xl z-50 fixed right-0 bg-primary'>
+      <p className='text-3xl'>Testing</p>
     </header>
   )
 }
