@@ -33,7 +33,7 @@ const Services = () => {
 
   return (
     <section id="services" className='rounded-t-3xl border-none bg-secondary text-primary'>
-      <div className='flex flex-col md:px-10 py-20 px-4'>
+      <div className='flex flex-col md:px-10 py-20 px-6'>
         <motion.h2 
         ref={serviceRef}
         variants={staggerChildren} 
@@ -51,10 +51,10 @@ const Services = () => {
             </motion.span>
           ))}
         </motion.h2>
-        <div className='w-full text-primary mt-20 grid grid-cols-12 mb-5'>
-          <div className='flex col-span-7 md:col-start-6 sm:flex-row'>
+        <div className='w-full text-primary mt-20 flex md:grid grid-cols-12'>
+          <div className='flex col-span-7 md:col-start-6 sm:flex-row flex-col'>
             <h3>Services</h3>
-            <p className='ml-10 mt-2 w-full font-medium'>
+            <p className='md:ml-10 mt-2 w-full font-medium max-w-[35ch]'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos perferendis iste neque doloremque voluptates magni officiis tempora necessitatibus autem, repellendus officia ex, harum deleniti corporis ipsa quia, praesentium consequatur.
             </p>
           </div>
@@ -67,7 +67,7 @@ const Services = () => {
                   <span className='col-span-2 text-4xl font-medium'>
                     (01)
                   </span>
-                  <h3 className='col-span-6 col-start-6 text-5xl font-medium'>
+                  <h3 className='col-span-6 col-start-6 md:text-5xl text-4xl font-medium'>
                     Web Development
                   </h3>
                 </div>
@@ -89,7 +89,7 @@ const Services = () => {
                   <span className='col-span-2 text-4xl font-medium'>
                     (02)
                   </span>
-                  <h3 className='col-span-6 col-start-6 text-5xl font-medium'>
+                  <h3 className='col-span-6 col-start-6 md:text-5xl text-4xl font-medium'>
                     Web Design
                   </h3>
                 </div>
@@ -111,8 +111,8 @@ const Services = () => {
                   <span className='col-span-2 text-4xl font-medium'>
                     (03)
                   </span>
-                  <h3 className='col-span-6 col-start-6 text-5xl font-medium'>
-                    Software Development
+                  <h3 className='col-span-6 col-start-6 md:text-5xl text-4xl font-medium'>
+                    SWE
                   </h3>
                 </div>
                 <div className='md:grid flex grid-cols-12'>
