@@ -97,13 +97,23 @@ function NavBarScroll () {
   const[active, setActive] = useState(false);
   
   return (
-    <motion.button
-    initial={{scale: 0}}
-    animate={{scale: 1}}
-    onClick={() => setActive(!active)}
-    className='text-black text-xl z-50 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 bg-primary sm:hover:scale-80 scale-100'>
-      <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 rotate-45": "-translate-y-1 rotate-0"} duration-300`} ></span>
-      <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 -rotate-45": "translate-y-1 rotate-0"} duration-300`}></span>
-    </motion.button>
+    <>
+      <motion.button
+      initial={{scale: 0}}
+      animate={{scale: 1}}
+      onClick={() => setActive(!active)}
+      className='text-black text-xl z-40 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 bg-primary sm:hover:scale-80 scale-100'>
+        <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 rotate-45": "-translate-y-1 rotate-0"} duration-300`} ></span>
+        <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 -rotate-45": "translate-y-1 rotate-0"} duration-300`}></span>
+      </motion.button>
+      {active && 
+      <div className='w-full h-screen fixed top-0 left-0 z-30 justify-end'>
+        <div className='w-full h-screen flex justify-end'>
+          <div className='max-w-2xl flex flex-col justify-end bg-third'>
+            Test
+          </div>
+        </div>
+      </div>}
+    </>
   )
 }
