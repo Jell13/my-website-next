@@ -71,7 +71,7 @@ function NavBarFixed () {
     variants={variant}
     initial="initial"
     animate="animate"
-    className='w-full absolute py-8 md:px-10 px-4 flex inset-x-0 z-10 justify-between items-center text-third'>
+    className='w-full absolute py-8  md:px-10 px-4 flex inset-x-0 z-10 justify-between items-center text-third'>
       <div className='flex flex-col md:flex-row md:gap-7 md:items-center'>
         <div className='flex items-center'>
         <span>&#169;</span><p className='text-lg font-semibold tracking-tighter text-secondary'>Code By Jason</p>
@@ -94,14 +94,16 @@ function NavBarFixed () {
 
 function NavBarScroll () {
 
+  const[active, setActive] = useState(false);
   
   return (
-    <motion.header
-    initial={{opacity: 0}}
-    animate={{opacity: 1}}
-    exit={{opacity: 0}}
-    className='text-black text-xl z-50 fixed right-5 top-5 rounded-full w-12 h-12 bg-primary'>
-      <p className='text-3xl'>.</p>
-    </motion.header>
+    <motion.button
+    initial={{scale: 0}}
+    animate={{scale: 1}}
+    onClick={() => setActive(!active)}
+    className='text-black text-xl z-50 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 bg-primary sm:hover:scale-80 scale-100'>
+      <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 rotate-45": "-translate-y-1 rotate-0"} duration-300`} ></span>
+      <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 -rotate-45": "translate-y-1 rotate-0"} duration-300`}></span>
+    </motion.button>
   )
 }

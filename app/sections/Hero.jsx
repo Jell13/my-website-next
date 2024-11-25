@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     
     <motion.section 
-    className='h-screen z-[-1] pb-10 text-secondary'>
+    className='h-screen z-[-1] pb-10 pt-20 md:pt-0 text-secondary'>
       <motion.div 
       style={{y: translate, scale: scaleDown, opacity: opacity}}
       className='w-full h-full flex justify-center items-center px-10'>
