@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 
 const NavBar = () => {
 
@@ -96,8 +96,12 @@ function NavBarScroll () {
 
   
   return (
-    <header className='text-black text-xl z-50 fixed right-0 bg-primary'>
-      <p className='text-3xl'>Testing</p>
-    </header>
+    <motion.header
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+    className='text-black text-xl z-50 fixed right-5 top-5 rounded-full w-12 h-12 bg-primary'>
+      <p className='text-3xl'>.</p>
+    </motion.header>
   )
 }
