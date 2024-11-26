@@ -95,6 +95,19 @@ function NavBarFixed () {
 function NavBarScroll () {
 
   const[active, setActive] = useState(false);
+
+  const links = [
+    {
+        id: 1,
+        name: "Services",
+        link: "#services"
+    },
+    {
+        id: 2,
+        name: "Works",
+        link: "#works"
+    }
+]
   
   return (
     <>
@@ -107,13 +120,25 @@ function NavBarScroll () {
         <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 -rotate-45": "translate-y-1 rotate-0"} duration-300`}></span>
       </motion.button>
       {active && 
-      <div className='w-full h-screen fixed top-0 left-0 z-30 justify-end'>
+      <motion.div 
+      className='w-full h-screen fixed top-0 left-0 z-30 justify-end duration-300'>
         <div className='w-full h-screen flex justify-end'>
-          <div className='max-w-2xl flex flex-col justify-end bg-third'>
-            Test
-          </div>
+          <motion.div 
+          initial={{x: active ? 500 : 0}}
+          animate={{x: active ? 0: 500, transition: {duration: 0.8, ease:[0.76, 0, 0.24, 1], delay: 0.05}}}
+          exit={{x: active && 0}}
+          className='w-[36em] lg:max-w-3xl flex flex-col justify-end bg-fourth'>
+            <div></div>
+            <nav className='relative w-full h-full px-10 leading-tight flex flex-col mt-20'>
+              {links.map(links => (
+                <a key={links.id} className='text-[4rem] text-primary font-medium group relative flex w-fit cursor-pointer items-center'>
+                  {links.name.toUpperCase()}
+                </a>
+              ))}
+            </nav>
+          </motion.div>
         </div>
-      </div>}
+      </motion.div>}
     </>
   )
 }
