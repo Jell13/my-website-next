@@ -100,14 +100,17 @@ function NavBarScroll () {
 
   const wordVariants = {
     hidden: {y: 50, opacity: 0},
-    visible: {y: 0, opacity: 1}
+    visible: {y: 0, opacity: 1, transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    }}
   }
 
   const staggerChildren = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.2
       }
     }
   }
@@ -130,25 +133,25 @@ function NavBarScroll () {
     }
 ]
 
-  const handleNavBar = () => {
-    setActive(!active)
+  // const handleNavBar = () => {
+  //   setActive(!active)
 
-    setTimeout(() => {
-      setLinkVisible(true)
-    }, 600)
-  }
+  //   setTimeout(() => {
+  //     setLinkVisible(true)
+  //   }, 600)
+  // }
 
-  const handleNavbarClose = () => {
-    setLinkVisible(false)
-    setActive(!active)
-  }
+  // const handleNavbarClose = () => {
+  //   setLinkVisible(false)
+  //   setActive(!active)
+  // }
   
   return (
     <>
       <motion.button
       initial={{scale: 0}}
       animate={{scale: 1}}
-      onClick={() => handleNavBar()}
+      onClick={() => setActive(!active)}
       className='text-black text-xl z-40 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 bg-primary sm:hover:scale-80 scale-100'>
         <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 rotate-45": "-translate-y-1 rotate-0"} duration-300`} ></span>
         <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 -rotate-45": "translate-y-1 rotate-0"} duration-300`}></span>
@@ -166,14 +169,15 @@ function NavBarScroll () {
             <motion.nav 
             variants={staggerChildren}
             initial="hidden"
-            animate={linkVisible ? "visible" : "hidden"}
+            animate="visible"
+            exit="hidden"
             className='relative w-full h-full px-10 leading-tight flex flex-col mt-20'>
               {links.map(links => (
                 <motion.li 
                 variants={wordVariants}
                 key={links.id} className='text-[4rem] text-primary font-medium group relative flex w-fit gap-4 cursor-pointer items-center'>
                   <span className='w-3 h-3 absolute invisible opacity-0 bg-primary rounded-full group-hover:visible group-hover:opacity-100 group-hover:scale-100 scale-0 duration-300'></span>
-                  <a href={links.link} onClick={() => handleNavbarClose()} className='group-hover:translate-x-7 duration-700 ease-out'>
+                  <a href={links.link} onClick={() => setActive(false)} className='group-hover:translate-x-7 duration-700 ease-out'>
                     {links.name}
                   </a>
                 </motion.li>

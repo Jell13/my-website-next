@@ -25,7 +25,7 @@ const Hero = () => {
       [0, 300],
       [1, 0.95]
     )
-    const DURATION = 0.6;
+    const DURATION = 0.4;
     const STAGGER = 0.1;
 
   return (
@@ -41,8 +41,8 @@ const Hero = () => {
               {"JASON SUGIHARTO".split("").map((letter, i) => (
                 <motion.span 
                 key={i}
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
+                initial={{y: 199, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
                 transition={{
                   duration: DURATION,
                   delay: STAGGER * i,
