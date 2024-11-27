@@ -52,15 +52,15 @@ const Services = () => {
           ))}
         </motion.h2>
         <div className='w-full text-primary mt-20 flex md:grid grid-cols-12'>
-          <div className='flex col-span-7 md:col-start-6 sm:flex-row flex-col'>
+          <div className='flex gap-20 col-span-7 md:col-start-6 sm:flex-row flex-col'>
             <h3>Services</h3>
-            <p className='md:ml-10 mt-2 w-full font-medium max-w-[35ch]'>
+            <p className='w-full font-medium leading-relaxed text-xl'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos perferendis iste neque doloremque voluptates magni officiis tempora necessitatibus autem, repellendus officia ex, harum deleniti corporis ipsa quia, praesentium consequatur.
             </p>
           </div>
         </div>
-        <div className='w-full pt-10'>
-          <div className='mt-12 flex flex-col pt-6 gap-y-16 justify-between'>
+        <div className='w-full pt-8'>
+          <div className='mt-4 flex flex-col pt-6 gap-y-16 justify-between'>
              {/* First Service */}
              <div className='sticky top-[20vh] border-t border-t-[#3f3f38] mb-[17.25em] bg-secondary'>
                 <div className='flex md:grid grid-cols-12 items-center justify-between pt-10'>

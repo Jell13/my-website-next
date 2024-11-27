@@ -48,7 +48,7 @@ const Hero = () => {
                   delay: STAGGER * i,
                   ease: "easeInOut"
                 }}
-                className='lg:text-[7rem] md:text-[5rem] text-[3rem] tracking-tighter font-genSans text-secondary font-medium'>
+                className='lg:text-[8rem] md:text-[5rem] text-[3rem] tracking-tighter font-genSans text-secondary font-medium'>
                   {letter}
                 </motion.span>
               ))}
