@@ -8,7 +8,7 @@ const Services = () => {
 
   const serviceRef = useRef()
 
-  const isInView = useInView(serviceRef, {once: true, margin: "-100px"})
+  const isInView = useInView(serviceRef, {margin: "-100px"})
 
   const wordVariants = {
     hidden: {y: 50, opacity: 0},
