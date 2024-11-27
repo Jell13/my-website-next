@@ -99,13 +99,18 @@ function NavBarScroll () {
   const links = [
     {
         id: 1,
-        name: "Services",
-        link: "#services"
+        name: "HOME",
+        link: "#home"
     },
     {
         id: 2,
-        name: "Works",
-        link: "#works"
+        name: "SERVICES",
+        link: "#services"
+    },
+    {
+      id: 3,
+      name: "WORKS",
+      link: "#works"
     }
 ]
   
@@ -131,9 +136,12 @@ function NavBarScroll () {
             <div></div>
             <nav className='relative w-full h-full px-10 leading-tight flex flex-col mt-20'>
               {links.map(links => (
-                <a key={links.id} className='text-[4rem] text-primary font-medium group relative flex w-fit cursor-pointer items-center'>
-                  {links.name.toUpperCase()}
-                </a>
+                <li key={links.id} className='text-[4rem] text-primary font-medium group relative flex w-fit gap-4 cursor-pointer items-center'>
+                  <span className='w-3 h-3 absolute invisible opacity-0 bg-primary rounded-full group-hover:visible group-hover:opacity-100 group-hover:scale-100 scale-0 duration-300'></span>
+                  <a href={links.link} onClick={() => setActive(!active)} className='group-hover:translate-x-7 duration-700 ease-out'>
+                    {links.name}
+                  </a>
+                </li>
               ))}
             </nav>
           </motion.div>
