@@ -7,7 +7,7 @@ const Works = () => {
 
     const workRef = useRef()
 
-    const isInView = useInView(workRef, {once: true, margin: "-100px"})
+    const isInView = useInView(workRef, {margin: "-100px"})
 
     const wordVariants = {
       hidden: {y: 50, opacity: 0},
@@ -58,28 +58,15 @@ const Works = () => {
             </p>
           </div>
         </div>
-        <div className='grid grid-cols-12 pt-12 gap-5'>
-            <div className='relative col-span-5'>
-              <div className='sticky top-12 text-[22vw] text-primary leading-[0.8] font-normal'>
-                <span className='relative'>0</span>
-                <div className='relative'>
-                  <div>
-                    <span className='inline-block'>
-                      1
-                      .
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <aside className='relative col-span-7'>
-              <div>
-                <a href="">
-                  <div>
+        <div className='grid grid-cols-12 pt-12 gap-5'>            
+            <aside className='relative col-span-12'>
+              <div className='grid grid-cols-12 gap-8'>
+                <a href="" className='col-span-7'>
+                  <div className=''>
                     <img src="https://www.lifewire.com/thmb/Uqi3NYSBuoCojLl65_it-e5NmVg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/keyboard-light-up-razer-gaming-2b6aa4b392184326925211f0cae4d6b9.jpg" alt="" />
                   </div>
                 </a>
+                <p className='col-span-5'>Testing</p>
               </div>
               <div>
                 <a href="">
