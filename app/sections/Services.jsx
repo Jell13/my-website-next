@@ -53,7 +53,7 @@ const Services = () => {
         </motion.h2>
         <div className='w-full text-primary mt-20 flex md:grid grid-cols-12'>
           <div className='flex gap-20 col-span-7 md:col-start-6 sm:flex-row flex-col'>
-            <h3 className='text-lg text-third'>(SERVICES)</h3>
+            <h3 className='text-lg text-third font-medium'>(SERVICES)</h3>
             <p className='w-full font-medium leading-relaxed text-xl'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos perferendis iste neque doloremque voluptates magni officiis tempora necessitatibus autem, repellendus officia ex, harum deleniti corporis ipsa quia, praesentium consequatur.
             </p>
@@ -68,7 +68,7 @@ const Services = () => {
                     (01)
                   </span>
                   <h3 className='col-span-6 col-start-6 md:text-5xl text-4xl font-medium'>
-                    Web Development
+                    Web Dev
                   </h3>
                 </div>
                 <div className='md:grid flex grid-cols-12'>

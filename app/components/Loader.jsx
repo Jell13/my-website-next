@@ -72,7 +72,7 @@ const Loader = ({setLoading}) => {
       animate="show"
       exit="exit"
       onAnimationComplete={() => setLoading(false)}
-      className='w-[400px]'>
+      className='md:w-[400px] w-[200px]'>
         <motion.div
         variants={itemMain}
         >

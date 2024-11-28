@@ -64,6 +64,11 @@ function NavBarFixed () {
           id: 2,
           name: "Works",
           link: "#works"
+      },
+      {
+          id: 3,
+          name: "About",
+          link: "#about"
       }
   ]
 
@@ -127,24 +132,16 @@ function NavBarScroll () {
         link: "#services"
     },
     {
-      id: 3,
-      name: "WORKS",
-      link: "#works"
+        id: 3,
+        name: "WORKS",
+        link: "#works"
+    },
+    {
+        id: 4,
+        name: "ABOUT",
+        link: "#about"
     }
 ]
-
-  // const handleNavBar = () => {
-  //   setActive(!active)
-
-  //   setTimeout(() => {
-  //     setLinkVisible(true)
-  //   }, 600)
-  // }
-
-  // const handleNavbarClose = () => {
-  //   setLinkVisible(false)
-  //   setActive(!active)
-  // }
   
   return (
     <>

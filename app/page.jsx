@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Loader from './components/Loader'
 import Services from './sections/Services'
 import Works from './sections/Works'
+import About from './sections/About'
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
             <Hero/>
             <Services/>
             <Works/>
+            <About/>
           </ReactLenis>
         </>
       )}

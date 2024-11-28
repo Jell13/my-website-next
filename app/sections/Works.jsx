@@ -31,9 +31,9 @@ const Works = () => {
 
   return (
     <section id='works' className='text-primary bg-secondary border-none -mt-1'>
-      <div className='w-full md:px-10 flex flex-col'>
+      <div className='w-full md:px-10 px-6 flex flex-col'>
         <motion.h1 
-        className='text-primary lg:text-[6rem] md:text-[4rem]'
+        className='text-primary lg:text-[6rem] md:text-[4rem] text-[3rem]'
         ref={workRef}
         variants={staggerChildren}
         initial="hidden"
@@ -52,7 +52,7 @@ const Works = () => {
 
         <div className='w-full text-primary mt-20 flex md:grid grid-cols-12'>
           <div className='flex gap-20 col-span-7 md:col-start-6 sm:flex-row flex-col'>
-            <h3>(WORKS)</h3>
+            <h3 className='text-third font-medium'>(WORKS)</h3>
             <p className='w-full font-medium leading-relaxed text-xl'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos perferendis iste neque doloremque voluptates magni officiis tempora necessitatibus autem
             </p>
@@ -78,7 +78,7 @@ const Works = () => {
                 <div className='flex gap-8'>
                   <div className='flex flex-col'>
                     <h5 className='text-2xl'>Productivity</h5>
-                    <h4 className='font-medium text-4xl'>Online Word Processor</h4>
+                    <h4 className='font-medium text-4xl'>Online Word Processor | NoteNet</h4>
                   </div>
                   <div className='flex items-end'>
                     <div className='border-[1px] border-third bg-third rounded-xl text-primary px-2'>2024</div>
@@ -99,8 +99,8 @@ const Works = () => {
               </a>
               <div className='flex gap-8'>
                 <div className='flex flex-col'>
-                  <h5 className='text-2xl'>Productivity</h5>
-                  <h4 className='font-medium text-4xl'>Online Word Processor</h4>
+                  <h5 className='text-2xl'>Productivity | Collaboration</h5>
+                  <h4 className='font-medium text-4xl'>Workspace Collaborator | LiveDocs</h4>
                 </div>
                 <div className='flex items-end'>
                   <div className='border-[1px] border-third bg-third rounded-xl text-primary px-2'>2024</div>
@@ -114,12 +114,12 @@ const Works = () => {
             </div>
 
             {/* Third project */}
-            <div className='col-span-3 col-start-3'>
+            <div className='col-span-3 col-start-3 mb-20'>
               <div>
                 <span className='text-[12vw] leading-loose'>03.</span>
               </div>
             </div>
-            <div className='col-span-7'>
+            <div className='col-span-7 mb-20'>
               <a href="">
                 <div className='relative flex justify-center items-center'>
                   <img src="https://i.redd.it/xlwemhje70i81.jpg" alt="" />
@@ -128,6 +128,15 @@ const Works = () => {
                   </div>
                 </div>
               </a>
+              <div className='flex gap-8'>
+                <div className='flex flex-col'>
+                  <h5 className='text-2xl'>Productivity | Collaboration</h5>
+                  <h4 className='font-medium text-4xl'>Workspace Collaborator | LiveDocs</h4>
+                </div>
+                <div className='flex items-end'>
+                  <div className='border-[1px] border-third bg-third rounded-xl text-primary px-2'>2024</div>
+                </div>
+              </div>
             </div>
         </div>
       </div>
