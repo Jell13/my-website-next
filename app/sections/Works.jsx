@@ -62,7 +62,7 @@ const Works = () => {
             {/* First project*/}
             <div className='relative col-span-12 mb-20'>
               <div>
-                <span className='text-[12vw] text-thin_text'>01.</span>
+                <span className='text-[12vw] hidden lg:block text-thin_text'>01.</span>
               </div>
               <div className='flex flex-col gap-8'>
                 <a href="" className='flex flex-col'>
@@ -81,14 +81,14 @@ const Works = () => {
                     <h4 className='font-medium text-4xl'>Online Word Processor | NoteNet</h4>
                   </div>
                   <div className='flex items-end'>
-                    <div className='border-[1px] border-thin_text bg-thin_text rounded-xl text-primary px-2'>2024</div>
+                    <div className='border-[1px] border-third bg-third rounded-xl text-primary px-2'>2024</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Second project */}
-            <div className='col-span-7 flex flex-col gap-8 mb-20'>
+            <div className='lg:col-span-7 col-span-12 flex flex-col gap-8 mb-20'>
               <a href="">
                 <div className='relative flex justify-center items-center'>
                   <img src="https://preview.redd.it/pkvfv2b209i61.jpg?width=4032&format=pjpg&auto=webp&s=f8a961144201dff925b7ec7ec3d3d4d09d10a338" alt="" />
@@ -107,19 +107,19 @@ const Works = () => {
                 </div>
               </div>
             </div>
-            <div className='col-span-3 col-start-9 mb-20'>
+            <div className='col-span-3 col-start-9 mb-20 lg:block hidden'>
               <div>
                 <span className='text-[12vw] text-thin_text'>02.</span>
               </div>
             </div>
 
             {/* Third project */}
-            <div className='col-span-3 col-start-3 mb-20'>
+            <div className='col-span-3 col-start-3 lg:block hidden mb-20'>
               <div>
                 <span className='text-[12vw] text-thin_text'>03.</span>
               </div>
             </div>
-            <div className='col-span-7 mb-20'>
+            <div className='lg:col-span-7 col-span-12 mb-20'>
               <a href="">
                 <div className='relative flex justify-center items-center'>
                   <img src="https://i.redd.it/xlwemhje70i81.jpg" alt="" />

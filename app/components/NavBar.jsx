@@ -142,6 +142,7 @@ function NavBarScroll () {
         link: "#about"
     }
 ]
+
   
   return (
     <>

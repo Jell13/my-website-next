@@ -1,8 +1,27 @@
-import React from 'react'
+"use client"
+
+import React, { useRef } from 'react'
 import { LuArrowDownRight } from "react-icons/lu"
+import { motion, useInView } from 'framer-motion'
 
 const About = () => {
 
+    const aboutRef = useRef()
+
+    const isInView = useInView(aboutRef, {margin: "-100px"})
+
+    const wordVariants = {
+      hidden: {y: 50, opacity: 0},
+      visible: {y: 0, opacity: 1}
+    }
+  
+    const staggerChildren = {
+      visible: {
+        transition: {
+          staggerChildren: 0.1
+        }
+      }
+    }
 
     const words = [
         "DEVELOPER,",
@@ -13,20 +32,27 @@ const About = () => {
     <section id='about' className='bg-secondary text-primary'>
         <div className='border-t border-t-[#3f3f38] flex flex-col gap-y-24 md:px-10 px-6'>
             <div className='grid grid-cols-12 gap-4 mt-20'>
-                <LuArrowDownRight size={100} className='text-primary col-span-1 font-thin col-start-2'/>
-                <h2 className='lg:col-span-7 lg:col-start-6 flex flex-col lg:text-[6rem] space-y-0 gap-0 font-medium leading-none'>
+                <LuArrowDownRight size={100} className='text-primary col-span-1 font-thin col-start-2 hidden'/>
+                <motion.h2 
+                ref={aboutRef}
+                variants={staggerChildren}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                className='lg:col-span-7 lg:col-start-6 col-span-12 flex flex-col lg:text-[6rem] md:text-[4rem] text-[3rem] space-y-0 gap-0 font-medium leading-none'>
                     {words.map((w, i) => (
-                        <span key={i}>
+                        <motion.span 
+                        variants={wordVariants}
+                        key={i}>
                             {w}&nbsp;
-                        </span>
+                        </motion.span>
                     ))}
-                </h2>
+                </motion.h2>
             </div>
             <div className='grid grid-cols-12 gap-4 mb-10'>
-                <div className='col-span-4'>
+                <div className='lg:col-span-4 col-span-12'>
                     <img src="./myhero.png" alt="" />
                 </div>
-                <div className='col-span-7 col-start-6'>
+                <div className='lg:col-span-7 lg:col-start-6 col-span-12'>
                     <div className='flex flex-col gap-y-10'>
                         <h6 className='text-2xl font-medium'>With a burning passion to help and develop ideas into reality that can help people. Solve one bug to produce a hundred more, but never giving up. Proudly say as an engineer that the absence of success is the presence of success.</h6>
                         <div className='flex flex-col lg:flex-row gap-y-14 gap-x-28'>
