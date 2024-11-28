@@ -52,7 +52,7 @@ const Works = () => {
 
         <div className='w-full text-primary mt-20 flex md:grid grid-cols-12'>
           <div className='flex gap-20 col-span-7 md:col-start-6 sm:flex-row flex-col'>
-            <h3 className='text-third font-medium'>(WORKS)</h3>
+            <h3 className='text-thin_text font-medium'>(WORKS)</h3>
             <p className='w-full font-medium leading-relaxed text-xl'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos perferendis iste neque doloremque voluptates magni officiis tempora necessitatibus autem
             </p>
@@ -62,7 +62,7 @@ const Works = () => {
             {/* First project*/}
             <div className='relative col-span-12 mb-20'>
               <div>
-                <span className='text-[12vw]'>01.</span>
+                <span className='text-[12vw] text-thin_text'>01.</span>
               </div>
               <div className='flex flex-col gap-8'>
                 <a href="" className='flex flex-col'>
@@ -81,7 +81,7 @@ const Works = () => {
                     <h4 className='font-medium text-4xl'>Online Word Processor | NoteNet</h4>
                   </div>
                   <div className='flex items-end'>
-                    <div className='border-[1px] border-third bg-third rounded-xl text-primary px-2'>2024</div>
+                    <div className='border-[1px] border-thin_text bg-thin_text rounded-xl text-primary px-2'>2024</div>
                   </div>
                 </div>
               </div>
@@ -109,14 +109,14 @@ const Works = () => {
             </div>
             <div className='col-span-3 col-start-9 mb-20'>
               <div>
-                <span className='text-[12vw]'>02.</span>
+                <span className='text-[12vw] text-thin_text'>02.</span>
               </div>
             </div>
 
             {/* Third project */}
             <div className='col-span-3 col-start-3 mb-20'>
               <div>
-                <span className='text-[12vw] leading-loose'>03.</span>
+                <span className='text-[12vw] text-thin_text'>03.</span>
               </div>
             </div>
             <div className='col-span-7 mb-20'>

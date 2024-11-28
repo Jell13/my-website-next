@@ -13,7 +13,8 @@ module.exports = {
         primary: "#D1D1C7",
         secondary: "#080807",
         third: "#6B645C",
-        fourth: "#393632"
+        fourth: "#393632",
+        thin_text: "#A29E9A"
       },
     },
   },
