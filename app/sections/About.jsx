@@ -1,12 +1,30 @@
 "use client"
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { LuArrowDownRight } from "react-icons/lu"
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 
 const About = () => {
 
     const aboutRef = useRef()
+
+    const{ scrollY } = useScroll()
+
+    const ref = useRef()
+    const inView = useInView(ref)
+
+    const scaleDown = useTransform(
+        scrollY,
+        [6400, 7000],
+        [1, 0.90]
+    )
+
+    const translate = useTransform(
+        scrollY,
+        [6400, 7000],
+        [0, 100]
+    )
+
 
     const isInView = useInView(aboutRef, {margin: "-100px"})
 
@@ -28,8 +46,13 @@ const About = () => {
         "CODER"
     ]
 
+    
+
   return (
-    <section id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
+    <motion.section 
+    ref={ref}
+    style={{scale: scaleDown, y: translate}}
+    id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
         <div className='border-t border-t-[#3f3f38] flex flex-col gap-y-24 md:px-10 px-6'>
             <div className='grid grid-cols-12 gap-4 mt-20'>
                 <LuArrowDownRight size={100} className='text-primary col-span-1 font-thin col-start-2 hidden'/>
@@ -54,7 +77,7 @@ const About = () => {
                 </div>
                 <div className='lg:col-span-7 lg:col-start-6 col-span-12'>
                     <div className='flex flex-col gap-y-10'>
-                        <h6 className='text-2xl font-medium'>With a burning passion to help and develop ideas into reality that can help people. Solve one bug to produce a hundred more, but never giving up. Proudly say as an engineer that the absence of success is the presence of success.</h6>
+                        <h6 className='text-2xl font-medium'>With a burning passion to help and develop ideas into reality that can help people. Solve one bug to produce a hundred more, but never giving up. Proudly say as an engineer that the absence of failure is the presence of success.</h6>
                         <div className='flex flex-col lg:flex-row gap-y-14 gap-x-28'>
                             <span className='text-lg flex h-fit text-thin_text font-medium tracking-tighter'>(ABOUT ME)</span>
                             <p className='flex w-full max-w-[48ch] text-balance text-thin_text'>
@@ -68,7 +91,7 @@ const About = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </motion.section>
   )
 }
 

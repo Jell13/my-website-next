@@ -2,7 +2,6 @@
 
 import { useScroll, useTransform, motion, animate } from 'framer-motion'
 import React, { useEffect } from 'react'
-import NavBar from '../components/NavBar'
 
 const Hero = () => {
 
