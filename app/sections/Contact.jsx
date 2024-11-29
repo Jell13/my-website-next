@@ -38,7 +38,9 @@ const Contact = () => {
                     </span>
                 ))}
             </h2>
-            <div></div>
+            <div className='w-full h-full bg-secondary text-primary'>
+
+            </div>
         </div>
     </motion.section>
   )
