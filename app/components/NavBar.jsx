@@ -69,6 +69,11 @@ function NavBarFixed () {
           id: 3,
           name: "About",
           link: "#about"
+      },
+      {
+          id: 4,
+          name: "Contact",
+          link: "#contact"
       }
   ]
 
@@ -140,6 +145,11 @@ function NavBarScroll () {
         id: 4,
         name: "ABOUT",
         link: "#about"
+    },
+    {
+        id: 5,
+        name: "CONTACT",
+        link: "#contact"
     }
 ]
 

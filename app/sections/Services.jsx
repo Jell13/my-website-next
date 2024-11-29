@@ -72,8 +72,8 @@ const Services = () => {
                   </h3>
                 </div>
                 <div className='md:grid flex grid-cols-12'>
-                  <div className='w-full flex flex-col col-span-7 col-start-6 pt-10'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora odio ratione, quas aspernatur repudiandae delectus, adipisci sapiente voluptatibus qui reprehenderit officiis ex, minima sit velit aut quae veniam possimus ea?</p>
+                  <div className='w-full flex flex-col gap-6 col-span-7 col-start-6 pt-10'>
+                    <p className='text-xl'>I develop data-driven solutions that address real-world problems by designing applications tailored to meet unmet needs. My focus is not just on building functional tools but on demonstrating their impact and showcasing how they solve practical challenges better than existing alternatives.</p>
                     <div className='flex flex-col pt-6 divide-y divide-[#3f3f38]'>
                       <span>NextJs</span>
                       <span>TailwindCSS</span>
@@ -90,12 +90,12 @@ const Services = () => {
                     (02)
                   </span>
                   <h3 className='col-span-6 col-start-6 md:text-5xl text-4xl font-medium'>
-                    Web Design
+                    Tutor
                   </h3>
                 </div>
                 <div className='md:grid flex grid-cols-12'>
-                  <div className='w-full flex flex-col col-span-7 col-start-6 pt-10'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora odio ratione, quas aspernatur repudiandae delectus, adipisci sapiente voluptatibus qui reprehenderit officiis ex, minima sit velit aut quae veniam possimus ea?</p>
+                  <div className='w-full flex flex-col gap-6 col-span-7 col-start-6 pt-10'>
+                    <p className='text-xl'>I’m passionate about tutoring because I enjoy helping others grow and succeed. I excel at breaking down complex concepts into simple, clear explanations, tailoring my teaching style to suit each learner’s needs. My flexibility ensures that I can adapt to different learning styles.</p>
                     <div className='flex flex-col pt-6 divide-y divide-[#3f3f38]'>
                       <span>NextJs</span>
                       <span>TailwindCSS</span>
@@ -116,8 +116,8 @@ const Services = () => {
                   </h3>
                 </div>
                 <div className='md:grid flex grid-cols-12'>
-                  <div className='w-full flex flex-col col-span-7 col-start-6 pt-10'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora odio ratione, quas aspernatur repudiandae delectus, adipisci sapiente voluptatibus qui reprehenderit officiis ex, minima sit velit aut quae veniam possimus ea?</p>
+                  <div className='w-full flex flex-col gap-6 col-span-7 col-start-6 pt-10'>
+                    <p className='text-xl'>I specialize in software engineering, turning innovative ideas into reality through coding. By exploring and refining concepts, I build solutions that showcase my problem-solving skills, demonstrating their effectiveness in addressing real-world challenges.</p>
                     <div className='flex flex-col pt-6 divide-y divide-[#3f3f38]'>
                       <span>NextJs</span>
                       <span>TailwindCSS</span>

@@ -29,7 +29,7 @@ const About = () => {
     ]
 
   return (
-    <section id='about' className='bg-secondary text-primary'>
+    <section id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
         <div className='border-t border-t-[#3f3f38] flex flex-col gap-y-24 md:px-10 px-6'>
             <div className='grid grid-cols-12 gap-4 mt-20'>
                 <LuArrowDownRight size={100} className='text-primary col-span-1 font-thin col-start-2 hidden'/>

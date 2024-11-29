@@ -9,6 +9,7 @@ import Loader from './components/Loader'
 import Services from './sections/Services'
 import Works from './sections/Works'
 import About from './sections/About'
+import Contact from './sections/Contact'
 
 function App() {
   
@@ -30,6 +31,7 @@ function App() {
             <Services/>
             <Works/>
             <About/>
+            <Contact/>
           </ReactLenis>
         </>
       )}
