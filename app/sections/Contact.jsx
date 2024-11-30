@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <motion.section
     style={{y: translate}}
-    id='contact' className='px-12 py-20 md:px-6 h-screen mb-40'>
+    id='contact' className='md:px-12 py-20 px-6 h-screen mb-20'>
         <div className='flex flex-col'>
             <motion.h2 
             ref={contactRef}
