@@ -10,6 +10,7 @@ import Services from './sections/Services'
 import Works from './sections/Works'
 import About from './sections/About'
 import Contact from './sections/Contact'
+import Footer from './sections/Footer'
 
 function App() {
   
@@ -32,6 +33,7 @@ function App() {
             <Works/>
             <About/>
             <Contact/>
+            <Footer/>
           </ReactLenis>
         </>
       )}

@@ -159,9 +159,13 @@ function NavBarScroll () {
       <motion.button
       initial={{scale: 0}}
       animate={{scale: 1}}
+      whileHover={{
+        scale: 0.8,
+        transition: {duration: 0.3}
+      }}
       onClick={() => setActive(!active)}
-      className='text-black text-xl z-40 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 bg-primary sm:hover:scale-80 scale-100'>
-        <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 rotate-45": "-translate-y-1 rotate-0"} duration-300`} ></span>
+      className='text-black text-xl z-40 fixed flex flex-col justify-center items-center right-7 top-7 rounded-full size-16 bg-primary hover:scale-90'>
+        <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 rotate-45": "-translate-y-1 rotate-0"} duration-300`}></span>
         <span className={`w-7 h-[2px] bg-secondary absolute rounded-full ${active ? "translate-y-0 -rotate-45": "translate-y-1 rotate-0"} duration-300`}></span>
       </motion.button>
       {active && 
