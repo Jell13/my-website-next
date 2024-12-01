@@ -71,7 +71,7 @@ const Contact = () => {
             </motion.h2>
             <div className='relative flex flex-col justify-center items-center h-full rounded-md bg-secondary text-primary'>
                 <div className='flex h-fit flex-col justify-center items-center py-20 gap-8'>
-                  <h2 className='uppercase max-w-[10ch] lg:text-[3rem] md:text-[2rem] text-[1rem] text-center font-semibold leading-tight'>
+                  <h2 className='uppercase max-w-[10ch] lg:text-[3rem] md:text-[2rem] text-[2rem] text-center font-semibold leading-tight'>
                     {words.map((w, i) => (
                       <span className='relative inline-block' key={i}>
                         {w}
