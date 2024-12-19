@@ -52,9 +52,10 @@ const Works = () => {
 
         <div className='w-full text-primary mt-20 flex md:grid grid-cols-12'>
           <div className='flex gap-20 col-span-7 md:col-start-6 sm:flex-row flex-col'>
-            <h3 className='text-thin_text font-medium'>(WORKS)</h3>
-            <p className='w-full font-medium leading-relaxed text-xl'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos perferendis iste neque doloremque voluptates magni officiis tempora necessitatibus autem
+            <h3 className='text-thin_text font-medium text-xl'>(WORKS)</h3>
+            <div></div>
+            <p className='w-[30ch] font-medium leading-relaxed text-xl'>
+              Featured projects that have been meticulously crafted with passion to drive results and impact
             </p>
           </div>
         </div>
@@ -77,7 +78,7 @@ const Works = () => {
                 </a>
                 <div className='flex gap-8'>
                   <div className='flex flex-col'>
-                    <h5 className='text-2xl'>Productivity</h5>
+                    <h5 className='text-2xl text-thin_text'>Productivity</h5>
                     <h4 className='font-medium text-4xl'>Online Word Processor | NoteNet</h4>
                   </div>
                   <div className='flex items-end'>
@@ -99,7 +100,7 @@ const Works = () => {
               </a>
               <div className='flex gap-8'>
                 <div className='flex flex-col'>
-                  <h5 className='text-2xl'>Productivity | Collaboration</h5>
+                  <h5 className='text-2xl text-thin_text'>Productivity | Collaboration</h5>
                   <h4 className='font-medium text-4xl'>Workspace Collaborator | LiveDocs</h4>
                 </div>
                 <div className='flex items-end'>
@@ -130,7 +131,7 @@ const Works = () => {
               </a>
               <div className='flex gap-8'>
                 <div className='flex flex-col'>
-                  <h5 className='text-2xl'>Productivity | Collaboration</h5>
+                  <h5 className='text-2xl text-thin_text'>Productivity | Collaboration</h5>
                   <h4 className='font-medium text-4xl'>Workspace Collaborator | LiveDocs</h4>
                 </div>
                 <div className='flex items-end'>

@@ -53,7 +53,7 @@ const Services = () => {
         </motion.h2>
         <div className='w-full text-primary mt-20 flex md:grid grid-cols-12'>
           <div className='flex gap-20 col-span-7 md:col-start-6 sm:flex-row flex-col'>
-            <h3 className='text-lg text-thin_text font-medium'>(SERVICES)</h3>
+            <h3 className='text-xl text-thin_text font-medium'>(SERVICES)</h3>
             <p className='w-full font-medium leading-relaxed text-xl'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos perferendis iste neque doloremque voluptates magni officiis tempora necessitatibus autem, repellendus officia ex, harum deleniti corporis ipsa quia, praesentium consequatur.
             </p>
@@ -73,8 +73,8 @@ const Services = () => {
                 </div>
                 <div className='md:grid flex grid-cols-12'>
                   <div className='w-full flex flex-col gap-6 col-span-7 col-start-6 pt-10'>
-                    <p className='text-xl'>I develop data-driven solutions that address real-world problems by designing applications tailored to meet unmet needs. My focus is not just on building functional tools but on demonstrating their impact and showcasing how they solve practical challenges better than existing alternatives.</p>
-                    <div className='flex flex-col pt-6 divide-y divide-[#3f3f38]'>
+                    <p className='text-xl text-thin_text'>I develop data-driven solutions that address real-world problems by designing applications tailored to meet unmet needs. My focus is not just on building functional tools but on demonstrating their impact and showcasing how they solve practical challenges better than existing alternatives.</p>
+                    <div className='flex flex-col pt-6 divide-y divide-[#3f3f38] text-xl'>
                       <span>NextJs</span>
                       <span>TailwindCSS</span>
                       <span>React</span>
@@ -95,11 +95,11 @@ const Services = () => {
                 </div>
                 <div className='md:grid flex grid-cols-12'>
                   <div className='w-full flex flex-col gap-6 col-span-7 col-start-6 pt-10'>
-                    <p className='text-xl'>I’m passionate about tutoring because I enjoy helping others grow and succeed. I excel at breaking down complex concepts into simple, clear explanations, tailoring my teaching style to suit each learner’s needs. My flexibility ensures that I can adapt to different learning styles.</p>
-                    <div className='flex flex-col pt-6 divide-y divide-[#3f3f38]'>
-                      <span>NextJs</span>
-                      <span>TailwindCSS</span>
-                      <span>React</span>
+                    <p className='text-xl text-thin_text'>I&apos;m passionate about tutoring because I enjoy helping others grow and succeed. I excel at breaking down complex concepts into simple, clear explanations, tailoring my teaching style to suit each learner’s needs. My flexibility ensures that I can adapt to different learning styles.</p>
+                    <div className='flex flex-col pt-6 divide-y text-xl divide-[#3f3f38]'>
+                      <span>Databases</span>
+                      <span>Object Oriented Programming</span>
+                      <span>Web Accessibility</span>
                     </div>
                   </div>
                 </div>
@@ -117,11 +117,11 @@ const Services = () => {
                 </div>
                 <div className='md:grid flex grid-cols-12'>
                   <div className='w-full flex flex-col gap-6 col-span-7 col-start-6 pt-10'>
-                    <p className='text-xl'>I specialize in software engineering, turning innovative ideas into reality through coding. By exploring and refining concepts, I build solutions that showcase my problem-solving skills, demonstrating their effectiveness in addressing real-world challenges.</p>
-                    <div className='flex flex-col pt-6 divide-y divide-[#3f3f38]'>
-                      <span>NextJs</span>
-                      <span>TailwindCSS</span>
-                      <span>React</span>
+                    <p className='text-xl text-thin_text'>I specialize in software engineering, turning innovative ideas into reality through coding. By exploring and refining concepts, I build solutions that showcase my problem-solving skills, demonstrating their effectiveness in addressing real-world challenges.</p>
+                    <div className='flex flex-col pt-6 divide-y text-xl divide-[#3f3f38]'>
+                      <span>Front-End Development</span>
+                      <span>Back-End Development</span>
+                      <span>Full Stack</span>
                     </div>
                   </div>
                 </div>
