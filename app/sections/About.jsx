@@ -11,7 +11,7 @@ const About = () => {
     const{ scrollY } = useScroll()
 
     const ref = useRef()
-    const inView = useInView(ref)
+    const inView = useInView(ref, { margin: "-100px", once: false })
 
     const scaleDown = useTransform(
         scrollY,
@@ -26,7 +26,11 @@ const About = () => {
     )
 
 
-    const isInView = useInView(aboutRef, {margin: "-100px"})
+    const isInView = useInView(aboutRef, {margin: "0px 0px 500px 0px"})
+
+    useEffect(() => {
+        console.log(`Element is ${isInView ? 'in view' : 'out of view'}`);
+    }, [isInView])
 
     const wordVariants = {
       hidden: {y: 50, opacity: 0},
@@ -46,12 +50,13 @@ const About = () => {
         "CODER"
     ]
 
-    
-
   return (
     <motion.section 
     ref={ref}
-    style={{scale: scaleDown, y: translate}}
+    initial={{ scale: 1 }}
+    animate={{ scale: inView ? 1 : 0.96 }}
+    transition={{ duration: 0.5 }}
+    // style={{scale: scaleDown, y: translate}}
     id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
         <div className='border-t border-t-[#3f3f38] flex flex-col gap-y-24 md:px-10 px-6'>
             <div className='grid grid-cols-12 gap-4 mt-20'>

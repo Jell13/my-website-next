@@ -16,6 +16,9 @@ module.exports = {
         fourth: "#393632",
         thin_text: "#A29E9A"
       },
+      // fontFamily: {
+      //   satoshi: ["Satoshi", "sans-serif"],
+      // }
     },
   },
   plugins: [],

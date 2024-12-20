@@ -1,7 +1,6 @@
 "use client"
 
 import { useScroll, useTransform, motion, inView, useInView } from 'framer-motion'
-import { span } from 'framer-motion/client'
 import React, { useEffect, useRef } from 'react'
 
 const Services = () => {
