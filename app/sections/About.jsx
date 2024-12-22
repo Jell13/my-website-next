@@ -1,36 +1,71 @@
 "use client"
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { LuArrowDownRight } from "react-icons/lu"
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { motion, motionValue, useInView, useScroll, useTransform } from 'framer-motion'
 
 const About = () => {
 
     const aboutRef = useRef()
 
-    const{ scrollY } = useScroll()
-
     const ref = useRef()
-    const inView = useInView(ref, { margin: "-100px", once: false })
-
-    const scaleDown = useTransform(
-        scrollY,
-        [6400, 7000],
-        [1, 0.90]
-    )
-
-    const translate = useTransform(
-        scrollY,
-        [6400, 7000],
-        [0, 100]
-    )
+    // const inView = useInView(ref, { margin: "0px 0px 10px 0px", once: false })
 
 
-    const isInView = useInView(aboutRef, {margin: "0px 0px 500px 0px"})
+    // const scaleDown = useTransform(
+    //     scrollY,
+    //     [6254, 7100],
+    //     [1, 0.90]
+    // )
 
+    // const translate = useTransform(
+    //     scrollY,
+    //     [6254, 7100],
+    //     [0, 100]
+    // )
+
+
+    const isInView = useInView(aboutRef, {margin: "-200px"})
+    const [startScrollY, setStartScrollY] = useState(0);
+    const [endScrollY, setEndScrollY] = useState(0);
+    const scrollProgress = motionValue(0); // Use motionValue for smooth updates
+  
+    // Calculate dynamic scroll positions
     useEffect(() => {
-        console.log(`Element is ${isInView ? 'in view' : 'out of view'}`);
-    }, [isInView])
+      const updateScrollPositions = () => {
+        const element = ref.current;
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const elementTop = rect.top + scrollTop;
+  
+        // Set dynamic scroll positions
+        setStartScrollY(elementTop - windowHeight);
+        setEndScrollY(elementTop + rect.height);
+      };
+  
+      updateScrollPositions();
+      window.addEventListener("resize", updateScrollPositions);
+      return () => window.removeEventListener("resize", updateScrollPositions);
+    }, [ref]);
+  
+    // Track scroll progress
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const progress = (scrollY - startScrollY) / (endScrollY - startScrollY);
+        scrollProgress.set(Math.max(0, Math.min(1, progress))); // Clamp to [0, 1]
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, [startScrollY, endScrollY, scrollProgress]);
+  
+    // Dynamically transform values based on scrollProgress
+    const scaleDown = useTransform(scrollProgress, [0.7, 1], [1, 0.95]);
+    const translate = useTransform(scrollProgress, [0.7, 1], [0, 100]);
+
+    // Cleanup the listener when the component unmounts
 
     const wordVariants = {
       hidden: {y: 50, opacity: 0},
@@ -53,10 +88,10 @@ const About = () => {
   return (
     <motion.section 
     ref={ref}
-    initial={{ scale: 1 }}
-    animate={{ scale: inView ? 1 : 0.96 }}
-    transition={{ duration: 0.5 }}
-    // style={{scale: scaleDown, y: translate}}
+    // initial={{ scale: 1 }}
+    // animate={{ scale: inView ? 1 : 0.96 }}
+    // transition={{ duration: 0.5 }}
+    style={{scale: scaleDown, y: translate}}
     id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
         <div className='border-t border-t-[#3f3f38] flex flex-col gap-y-24 md:px-10 px-6'>
             <div className='grid grid-cols-12 gap-4 mt-20'>

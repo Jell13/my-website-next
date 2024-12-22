@@ -11,11 +11,11 @@ const NavBar = () => {
   const handleScroll = () => {
     if(window.scrollY >= window.innerHeight){
       setIsScrolling(true)
-      console.log("The other shows up")
+      // console.log("The other shows up")
     }
     else{
       setIsScrolling(false)
-      console.log("Fixed shows up")
+      // console.log("Fixed shows up")
     }
   }
 

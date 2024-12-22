@@ -22,14 +22,14 @@ const Contact = () => {
       }
     }
 
-    useEffect(() => {
-        const unsubscribe = scrollY.onChange((latest) => {
-          console.log("scrollY:", latest);
-        });
+    // useEffect(() => {
+    //     const unsubscribe = scrollY.onChange((latest) => {
+    //       console.log("scrollY:", latest);
+    //     });
     
-        // Cleanup the listener when the component unmounts
-        return () => unsubscribe();
-      }, [scrollY]);
+    //     // Cleanup the listener when the component unmounts
+    //     return () => unsubscribe();
+    //   }, [scrollY]);
 
     const translate = useTransform(
         scrollY,
