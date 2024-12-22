@@ -9,7 +9,7 @@ const About = () => {
     const aboutRef = useRef()
 
     const ref = useRef()
-    // const inView = useInView(ref, { margin: "0px 0px 10px 0px", once: false })
+    const inView = useInView(ref, { margin: "-700px 0px 0px 0px", once: false })
 
 
     // const scaleDown = useTransform(
@@ -26,46 +26,7 @@ const About = () => {
 
 
     const isInView = useInView(aboutRef, {margin: "-200px"})
-    const [startScrollY, setStartScrollY] = useState(0);
-    const [endScrollY, setEndScrollY] = useState(0);
-    const scrollProgress = motionValue(0); // Use motionValue for smooth updates
-  
-    // Calculate dynamic scroll positions
-    useEffect(() => {
-      const updateScrollPositions = () => {
-        const element = ref.current;
-        const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const elementTop = rect.top + scrollTop;
-  
-        // Set dynamic scroll positions
-        setStartScrollY(elementTop - windowHeight);
-        setEndScrollY(elementTop + rect.height);
-      };
-  
-      updateScrollPositions();
-      window.addEventListener("resize", updateScrollPositions);
-      return () => window.removeEventListener("resize", updateScrollPositions);
-    }, [ref]);
-  
-    // Track scroll progress
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const progress = (scrollY - startScrollY) / (endScrollY - startScrollY);
-        scrollProgress.set(Math.max(0, Math.min(1, progress))); // Clamp to [0, 1]
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, [startScrollY, endScrollY, scrollProgress]);
-  
-    // Dynamically transform values based on scrollProgress
-    const scaleDown = useTransform(scrollProgress, [0.7, 1], [1, 0.95]);
-    const translate = useTransform(scrollProgress, [0.7, 1], [0, 100]);
-
-    // Cleanup the listener when the component unmounts
+    
 
     const wordVariants = {
       hidden: {y: 50, opacity: 0},
@@ -88,10 +49,10 @@ const About = () => {
   return (
     <motion.section 
     ref={ref}
-    // initial={{ scale: 1 }}
-    // animate={{ scale: inView ? 1 : 0.96 }}
-    // transition={{ duration: 0.5 }}
-    style={{scale: scaleDown, y: translate}}
+    initial={{ scale: 1 }}
+    animate={{ scale: inView ? 1 : 0.96 }}
+    transition={{ duration: 0.5 }}
+    // style={{scale: scaleDown, y: translate}}
     id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
         <div className='border-t border-t-[#3f3f38] flex flex-col gap-y-16 md:px-10 px-6'>
             <div className='grid grid-cols-12 gap-2 mt-20'>
