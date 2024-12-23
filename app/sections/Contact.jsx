@@ -59,7 +59,7 @@ const Contact = () => {
             variants={staggerChildren}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className='font-medium text-secondary lg:text-[6rem] md:text-[4rem] text-[3rem]'>
+            className='font-medium text-secondary xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem]'>
                 {contactMe.map((s,i) => (
                     <motion.span
                     key={i}

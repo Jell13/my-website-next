@@ -62,7 +62,7 @@ const About = () => {
                 variants={staggerChildren}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
-                className='lg:col-span-7 lg:col-start-6 col-span-12 flex flex-col lg:text-[6rem] md:text-[4rem] text-[3rem] space-y-0 gap-0 font-medium leading-none'>
+                className='lg:col-span-7 lg:col-start-6 col-span-12 flex flex-col xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem] space-y-0 gap-0 font-medium leading-none'>
                     {words.map((w, i) => (
                         <motion.span 
                         variants={wordVariants}

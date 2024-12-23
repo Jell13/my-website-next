@@ -38,7 +38,7 @@ const Services = () => {
         variants={staggerChildren} 
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className='text-primary lg:text-[6rem] md:text-[4rem] text-[3rem]'>
+        className='text-primary xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem]'>
           {title.map((word, i) => (
             <motion.span 
             key={i}

@@ -33,7 +33,7 @@ const Works = () => {
     <section id='works' className='text-primary bg-secondary border-none -mt-1'>
       <div className='w-full md:px-10 px-6 flex flex-col'>
         <motion.h1 
-        className='text-primary lg:text-[6rem] md:text-[4rem] text-[3rem]'
+        className='text-primary xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem]'
         ref={workRef}
         variants={staggerChildren}
         initial="hidden"
