@@ -6,12 +6,26 @@ import { motion, motionValue, useInView, useScroll, useTransform } from 'framer-
 
 const About = () => {
 
-    const aboutRef = useRef()
+    const aboutRef = useRef(null)
+    const targetRef = useRef(null)
 
-    const ref = useRef()
-    const inView = useInView(ref, { margin: "-700px 0px 0px 0px", once: false })
+    // const inView = useInView(ref, { margin: "-700px 0px 0px 0px", once: false })
 
+    const {scrollYProgress} = useScroll({
+        target: targetRef,
+        offset: ["end end", "end start"]
+    })
+    const scale = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [1, 0.93]
+    )
 
+    const y = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0, 100]
+    )
     // const scaleDown = useTransform(
     //     scrollY,
     //     [6254, 7100],
@@ -48,11 +62,11 @@ const About = () => {
 
   return (
     <motion.section 
-    ref={ref}
-    initial={{ scale: 1 }}
-    animate={{ scale: inView ? 1 : 0.96 }}
-    transition={{ duration: 0.5 }}
-    // style={{scale: scaleDown, y: translate}}
+    ref={targetRef}
+    style={{
+        scale,
+        y
+    }}
     id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
         <div className='border-t border-t-[#3f3f38] flex flex-col gap-y-16 md:px-10 px-6'>
             <div className='grid grid-cols-12 gap-2 mt-20'>

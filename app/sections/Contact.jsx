@@ -4,8 +4,11 @@ import { LuArrowDownRight } from "react-icons/lu"
 
 const Contact = () => {
 
-    const contactRef = useRef()
-    const { scrollY } = useScroll()
+    const contactRef = useRef(null)
+    const { scrollY } = useScroll({
+      target: contactRef,
+      offset: ["end end", "end start"]
+    })
 
     const isInView = useInView(contactRef, {margin: "-100px"})
 
@@ -33,7 +36,7 @@ const Contact = () => {
 
     const translate = useTransform(
         scrollY,
-        [6300, 6700],
+        [0, 1],
         [-200, 0]
     )
 
@@ -51,8 +54,8 @@ const Contact = () => {
 
   return (
     <motion.section
-    style={{y: translate}}
-    id='contact' className='md:px-12 py-20 px-6 h-screen mb-20'>
+    style={{translate}}
+    id='contact' className='md:px-12 py-20 px-6 h-screen mb-20 mt-20'>
         <div className='flex flex-col'>
             <motion.h2 
             ref={contactRef}
