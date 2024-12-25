@@ -9,8 +9,6 @@ const About = () => {
     const aboutRef = useRef(null)
     const targetRef = useRef(null)
 
-    // const inView = useInView(ref, { margin: "-700px 0px 0px 0px", once: false })
-
     const {scrollYProgress} = useScroll({
         target: targetRef,
         offset: ["end end", "end start"]
@@ -26,18 +24,6 @@ const About = () => {
         [0, 1],
         [0, 100]
     )
-    // const scaleDown = useTransform(
-    //     scrollY,
-    //     [6254, 7100],
-    //     [1, 0.90]
-    // )
-
-    // const translate = useTransform(
-    //     scrollY,
-    //     [6254, 7100],
-    //     [0, 100]
-    // )
-
 
     const isInView = useInView(aboutRef, {margin: "-200px"})
     
@@ -64,7 +50,7 @@ const About = () => {
     <motion.section 
     ref={targetRef}
     style={{
-        scale,
+        scale: scale,
         y
     }}
     id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
