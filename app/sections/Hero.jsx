@@ -47,7 +47,7 @@ const Hero = () => {
                   delay: STAGGER * i,
                   ease: "easeInOut"
                 }}
-                className='xl:text-[8rem] lg:text-[6rem] md:text-[5rem] text-[3rem] tracking-tighter mt-6 text-secondary font-medium'>
+                className='xl:text-[8rem] lg:text-[6rem] md:text-[5rem] text-[2rem] tracking-tighter mt-6 text-secondary font-medium'>
                   {letter}
                 </motion.span>
               ))}
@@ -60,7 +60,7 @@ const Hero = () => {
               }}}
               className='flex col-span-4 flex-col justify-center items-center pl-10'>
                 <div className='w-[30ch]'>
-                  <p className='text-lg text-third'>Crafting sleek, responsive front-end experiences that turn ideas into interactive, user-friendly interfaces. Every pixel matters, and every line of code drives results.</p>
+                  <p className='lg:text-lg text-md text-third'>Crafting sleek, responsive front-end experiences that turn ideas into interactive, user-friendly interfaces. Every pixel matters, and every line of code drives results.</p>
                 </div>
               </motion.div>
               <div className='md:col-span-4 col-span-3 flex justify-center md:items-start items-center'>
