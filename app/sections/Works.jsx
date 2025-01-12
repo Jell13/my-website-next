@@ -30,26 +30,7 @@ const Works = () => {
     ]
 
     const [hovered, setHovered] = useState(false)
-    // const [cursorPosition, setCursorPosition] = useState({x: 0, y: 0})
-
-    // const handleMouseMove = (e) => {
-    //   setCursorPosition({x: e.clientX, y: e.clientY})
-    // }
-    const cursorSize = 20
-    const mousePosition = {
-      x: useMotionValue(0),
-      y: useMotionValue(0)
-    }
-    const manageMouseMove = (e) => {
-      mousePosition.x.set(e.clientX - cursorSize / 2),
-      mousePosition.y.set(e.clientY - cursorSize / 2)
-    }
-
-    useEffect(() => {
-      window.addEventListener("mousemove", manageMouseMove)
-      return () => window.removeEventListener("mousemove", manageMouseMove)
-    })
-
+  
   return (
     <section id='works' className='text-primary relative bg-secondary border-none -mt-1'>
       <div className='w-full md:px-10 px-6 flex flex-col'>
@@ -82,48 +63,6 @@ const Works = () => {
         </div>
         <div className='grid grid-cols-12 pt-12 gap-5 mt-10'>
             {/* First project*/}
-            {/* <div className='col-span-3 col-start-3 mb-20'>
-              <div>
-                <span className='text-[12vw] hidden lg:block text-thin_text'>01.</span>
-              </div>
-            <div className='lg:col-span-7'>
-              <div className='flex flex-col gap-8'>
-                <a 
-                onMouseEnter={(e) => setHovered(true)} 
-                onMouseLeave={(e) => setHovered(false)} 
-                // onMouseMove={handleMouseMove}
-                href="" className='flex flex-col'>
-                  <div className='relative flex justify-center items-center'>
-                    <img 
-                    className='h-full w-full object-cover'
-                    loading='lazy'
-                    src="https://www.lifewire.com/thmb/Uqi3NYSBuoCojLl65_it-e5NmVg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/keyboard-light-up-razer-gaming-2b6aa4b392184326925211f0cae4d6b9.jpg" alt="" />
-                    <div className='absolute z-10 text-white text-2xl'>
-                      Vid of project here
-                    </div>
-                    <motion.div
-                    className="absolute left-0 top-0 bg-gray-800 text-white p-2 rounded-xl"
-                    style={{x: mousePosition.x, y: mousePosition.y}}
-                    initial={false}
-                    animate={{scale: hovered ? 1 : 0}}
-                    >
-                      View
-                    </motion.div>
-                  </div>
-                </a>
-                <div className='flex gap-8'>
-                  <div className='flex flex-col'>
-                    <h5 className='text-2xl text-thin_text'>Productivity</h5>
-                    <h4 className='font-medium text-4xl'>Online Word Processor | NoteNet</h4>
-                  </div>
-                  <div className='flex items-end'>
-                    <div className='border-[1px] border-third bg-third rounded-xl text-primary px-2'>2024</div>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div> */}
-
             <div className='col-span-3 col-start-3 lg:block hidden mb-20'>
               <div>
                 <span className='text-[12vw] text-thin_text'>01.</span>
@@ -134,7 +73,7 @@ const Works = () => {
                 <div className='flex justify-center items-center'>
                   <motion.img whileHover={{
                     scale: 0.97,
-                    transition: {duration: 0.8, ease: "easeIn"}
+                    transition: {duration: 0.8, ease: "easeIn"},
                   }} src="https://www.lifewire.com/thmb/Uqi3NYSBuoCojLl65_it-e5NmVg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/keyboard-light-up-razer-gaming-2b6aa4b392184326925211f0cae4d6b9.jpg" alt="" loading='lazy'/>
                   <div className='absolute z-10 text-white text-2xl'>
                     Vid of project here
@@ -151,12 +90,16 @@ const Works = () => {
                 </div>
               </div>
             </div>
+            {/* <WorkBoxLeft/> */}
 
             {/* Second project */}
             <div className='lg:col-span-7 col-span-12 flex flex-col gap-8 mb-20'>
               <a href="">
                 <div className='relative flex justify-center items-center'>
-                  <img src="https://preview.redd.it/pkvfv2b209i61.jpg?width=4032&format=pjpg&auto=webp&s=f8a961144201dff925b7ec7ec3d3d4d09d10a338" alt="" loading='lazy'/>
+                  <motion.img whileHover={{
+                    scale: 0.97,
+                    transition: {duration: 0.8, ease: "easeIn"},
+                  }} src="https://preview.redd.it/pkvfv2b209i61.jpg?width=4032&format=pjpg&auto=webp&s=f8a961144201dff925b7ec7ec3d3d4d09d10a338" alt="" loading='lazy'/>
                   <div className='absolute z-10 text-white text-2xl'>
                     Vid of project here
                   </div>
@@ -187,7 +130,10 @@ const Works = () => {
             <div className='lg:col-span-7 col-span-12 mb-20'>
               <a href="">
                 <div className='relative flex justify-center items-center'>
-                  <img src="https://i.redd.it/xlwemhje70i81.jpg" alt="" loading='lazy'/>
+                  <motion.img whileHover={{
+                    scale: 0.97,
+                    transition: {duration: 0.8, ease: "easeIn"},
+                  }} src="https://i.redd.it/xlwemhje70i81.jpg" alt="" loading='lazy'/>
                   <div className='absolute z-10 text-white text-2xl'>
                     Vid of project here
                   </div>
