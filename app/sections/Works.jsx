@@ -35,7 +35,7 @@ const Works = () => {
     // const handleMouseMove = (e) => {
     //   setCursorPosition({x: e.clientX, y: e.clientY})
     // }
-    const cursorSize = 50
+    const cursorSize = 20
     const mousePosition = {
       x: useMotionValue(0),
       y: useMotionValue(0)
@@ -51,7 +51,7 @@ const Works = () => {
     })
 
   return (
-    <section id='works' className='text-primary bg-secondary border-none -mt-1'>
+    <section id='works' className='text-primary relative bg-secondary border-none -mt-1'>
       <div className='w-full md:px-10 px-6 flex flex-col'>
         <motion.h1 
         className='text-primary xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem]'
@@ -129,24 +129,16 @@ const Works = () => {
                 <span className='text-[12vw] text-thin_text'>01.</span>
               </div>
             </div>
-            <div className='lg:col-span-7 relative col-span-12 mb-20'>
-              <a 
-              onMouseEnter={(e) => setHovered(true)}
-              onMouseLeave={(e) => setHovered(false)}
-              href="">
+            <div className='lg:col-span-7 col-span-12 mb-20'>
+              <a href="">
                 <div className='flex justify-center items-center'>
-                  <img src="https://www.lifewire.com/thmb/Uqi3NYSBuoCojLl65_it-e5NmVg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/keyboard-light-up-razer-gaming-2b6aa4b392184326925211f0cae4d6b9.jpg" alt="" loading='lazy'/>
+                  <motion.img whileHover={{
+                    scale: 0.97,
+                    transition: {duration: 0.8, ease: "easeIn"}
+                  }} src="https://www.lifewire.com/thmb/Uqi3NYSBuoCojLl65_it-e5NmVg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/keyboard-light-up-razer-gaming-2b6aa4b392184326925211f0cae4d6b9.jpg" alt="" loading='lazy'/>
                   <div className='absolute z-10 text-white text-2xl'>
                     Vid of project here
                   </div>
-                  <motion.div
-                    className="absolute left-10 top-0 bg-gray-800 text-white p-2 rounded-xl"
-                    style={{x: mousePosition.x, y: mousePosition.y}}
-                    initial={false}
-                    animate={{scale: hovered ? 1 : 0}}
-                    >
-                    View
-                  </motion.div>
                 </div>
               </a>
               <div className='flex gap-8'>
