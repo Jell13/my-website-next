@@ -32,7 +32,7 @@ const Works = () => {
     const [hovered, setHovered] = useState(false)
   
   return (
-    <section id='works' className='text-primary relative bg-secondary border-none -mt-1'>
+    <section id='works' className='text-primary relative bg-secondary border-none -mt-1 font-libre'>
       <div className='w-full md:px-10 px-6 flex flex-col'>
         <motion.h1 
         className='text-primary xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem]'
@@ -43,7 +43,7 @@ const Works = () => {
         >
             {title.map((l, i) => (
               <motion.span 
-              className='inline-block mr-2 text-primary font-medium'
+              className='inline-block mr-2 text-primary font-medium font-prompt'
               variants={wordVariants}
               key={i}>
                 {l}
@@ -56,7 +56,7 @@ const Works = () => {
           <div className='flex gap-20 col-span-7 md:col-start-6 sm:flex-row flex-col'>
             <h3 className='text-thin_text font-medium text-xl'>(WORKS)</h3>
             <div></div>
-            <p className='w-[30ch] font-medium leading-relaxed text-xl'>
+            <p className='md:w-[30ch] font-medium leading-relaxed text-xl'>
               Featured projects that have been meticulously crafted with passion to drive results and impact
             </p>
           </div>

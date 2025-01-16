@@ -54,7 +54,7 @@ const About = () => {
         scale,
         y
     }}
-    id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
+    id='about' className='bg-secondary text-primary border-none rounded-b-3xl font-libre'>
         <div className='border-t border-t-[#3f3f38] flex flex-col gap-y-16 md:px-10 px-6'>
             <div className='grid grid-cols-12 gap-2 mt-20'>
                 <LuArrowDownRight size={100} className='text-primary col-span-1 font-thin col-start-2 hidden md:block'/>
@@ -63,7 +63,7 @@ const About = () => {
                 variants={staggerChildren}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
-                className='lg:col-span-7 lg:col-start-6 col-span-12 flex flex-col xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem] space-y-0 gap-0 font-medium leading-none'>
+                className='lg:col-span-7 font-prompt lg:col-start-6 col-span-12 flex flex-col xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem] space-y-0 gap-0 font-medium leading-none'>
                     {words.map((w, i) => (
                         <motion.span 
                         variants={wordVariants}

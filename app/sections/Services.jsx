@@ -31,7 +31,7 @@ const Services = () => {
 
 
   return (
-    <section id="services" className='rounded-t-3xl border-none bg-secondary text-primary'>
+    <section id="services" className='rounded-t-3xl border-none bg-secondary text-primary font-libre'>
       <div className='flex flex-col md:px-10 py-20 px-6'>
         <motion.h2 
         ref={serviceRef}
@@ -43,7 +43,7 @@ const Services = () => {
             <motion.span 
             key={i}
             variants={wordVariants}
-            className='inline-block mr-2 text-primary font-medium'
+            className='inline-block mr-2 text-primary font-medium font-prompt'
             >
               {word}
               &nbsp;

@@ -82,7 +82,7 @@ function NavBarFixed () {
     variants={variant}
     initial="initial"
     animate="animate"
-    className='w-full absolute py-8  md:px-10 px-4 flex inset-x-0 z-10 justify-between items-center text-third'>
+    className='w-full font-libre absolute py-8  md:px-10 px-4 flex inset-x-0 z-10 justify-between items-center text-third'>
       <div className='flex flex-col md:flex-row md:gap-7 md:items-center'>
         <div className='flex items-center'>
         <span>&#169;</span><p className='text-lg font-semibold tracking-tighter text-secondary'>Code By Jason</p>

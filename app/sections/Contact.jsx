@@ -25,15 +25,6 @@ const Contact = () => {
       }
     }
 
-    // useEffect(() => {
-    //     const unsubscribe = scrollY.onChange((latest) => {
-    //       console.log("scrollY:", latest);
-    //     });
-    
-    //     // Cleanup the listener when the component unmounts
-    //     return () => unsubscribe();
-    //   }, [scrollY]);
-
     const translate = useTransform(
         scrollY,
         [0, 1],
@@ -55,14 +46,14 @@ const Contact = () => {
   return (
     <motion.section
     style={{translate}}
-    id='contact' className='md:px-12 py-20 px-6 h-screen mb-20 mt-20'>
+    id='contact' className='md:px-12 py-20 px-6 h-screen mb-20 mt-20 font-libre'>
         <div className='flex flex-col'>
             <motion.h2 
             ref={contactRef}
             variants={staggerChildren}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className='font-medium text-secondary xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem]'>
+            className='font-medium text-secondary font-prompt xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem]'>
                 {contactMe.map((s,i) => (
                     <motion.span
                     key={i}
