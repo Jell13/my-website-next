@@ -8,6 +8,7 @@ const About = () => {
 
     const aboutRef = useRef(null)
     const targetRef = useRef(null)
+    const picRef = useRef(null)
 
     const {scrollYProgress} = useScroll({
         target: targetRef,
@@ -25,9 +26,9 @@ const About = () => {
         [0, 100]
     )
 
-    const isInView = useInView(aboutRef, {margin: "-200px"})
+    const isInView = useInView(aboutRef, {margin: "-200px", once: true})
+    const isInViewPic = useInView(picRef, {margin: "-200px", once: false})
     
-
     const wordVariants = {
       hidden: {y: 50, opacity: 0},
       visible: {y: 0, opacity: 1}
@@ -50,7 +51,7 @@ const About = () => {
     <motion.section 
     ref={targetRef}
     style={{
-        scale: scale,
+        scale,
         y
     }}
     id='about' className='bg-secondary text-primary border-none rounded-b-3xl'>
@@ -74,7 +75,11 @@ const About = () => {
             </div>
             <div className='grid grid-cols-12 gap-4 mb-10'>
                 <div className='lg:col-span-4 col-span-12'>
-                    <img src="./myhero.png" alt="" />
+                    <motion.img 
+                    ref={picRef}
+                    initial={{opacity: 0}}
+                    animate={isInViewPic ? {opacity: 1} : {opacity: 0}}
+                    src="./myhero.png" alt="" />
                 </div>
                 <div className='lg:col-span-7 lg:col-start-6 col-span-12'>
                     <div className='flex flex-col gap-y-10'>

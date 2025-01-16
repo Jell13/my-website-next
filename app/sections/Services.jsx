@@ -54,7 +54,7 @@ const Services = () => {
           <div className='flex gap-20 col-span-7 md:col-start-6 sm:flex-row flex-col'>
             <h3 className='text-xl text-thin_text font-medium'>(SERVICES)</h3>
             <p className='w-full font-medium leading-relaxed text-xl'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos perferendis iste neque doloremque voluptates magni officiis tempora necessitatibus autem, repellendus officia ex, harum deleniti corporis ipsa quia, praesentium consequatur.
+              Struggling to understand code, launch projects, or scale your skills? I empower you with tailored solutions, expert guidance, and robust software that brings your ideas to life and takes your goals to the next level.
             </p>
           </div>
         </div>
