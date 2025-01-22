@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react'
-import { ReactLenis } from 'lenis/dist/lenis-react'
+import { ReactLenis, useLenis } from 'lenis/react'
 import Hero from './sections/Hero'
 import NavBar from './components/NavBar'
 import { AnimatePresence, motion } from 'framer-motion'
