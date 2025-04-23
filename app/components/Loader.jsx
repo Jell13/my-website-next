@@ -72,11 +72,11 @@ const Loader = ({setLoading}) => {
       animate="show"
       exit="exit"
       onAnimationComplete={() => setLoading(false)}
-      className='md:w-[400px] w-[200px]'>
+      className='md:w-[400px] w-[200px] rounded-xl'>
         <motion.div
         variants={itemMain}
         >
-          <motion.img layoutId="main-image" className='object-contain' src="/myhero.png" alt=""/>
+          <motion.img layoutId="main-image" className='object-contain rounded-xl' src="/myhero.png" alt=""/>
         </motion.div>
       </motion.div>
     </motion.div>

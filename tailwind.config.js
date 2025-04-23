@@ -17,7 +17,7 @@ module.exports = {
         thin_text: "#A29E9A"
       },
       fontFamily: {
-        prompt: ["Prompt"],
+        pop: ["Poppins"],
         libre: ["Libre Franklin"]
       }
     },
