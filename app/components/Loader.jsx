@@ -54,29 +54,17 @@ const Loader = ({setLoading}) => {
 
   return (
     <motion.div className='w-full h-screen grainy flex justify-center items-center'>
-      {/* <motion.div
-      initial={{y: 0}}
-      animate={{y: "-100%", transition: {
-        duration: 1.4,
-        ease: [0.6, 0.01, -0.05, 0.9] 
-      }}}
-      onAnimationComplete={() => setLoading(false)}
-      className='w-full h-full bg-black'
-      >
-        &nbsp;
-      </motion.div> */}
-
       <motion.div 
       variants={container}
       initial="hidden"
       animate="show"
       exit="exit"
       onAnimationComplete={() => setLoading(false)}
-      className='md:w-[400px] w-[200px] rounded-xl'>
+      className='md:w-[400px] w-[200px] md:rounded-xl'>
         <motion.div
         variants={itemMain}
         >
-          <motion.img layoutId="main-image" className='object-contain rounded-xl' src="/myhero.png" alt=""/>
+          <motion.img layoutId="main-image" className='object-contain md:rounded-xl' src="/myhero.png" alt=""/>
         </motion.div>
       </motion.div>
     </motion.div>

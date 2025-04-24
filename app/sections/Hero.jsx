@@ -36,7 +36,7 @@ const Hero = () => {
       style={{y: translate, scale: scaleDown, opacity: opacity}}
       className='w-full h-full flex justify-center items-center px-10'>
         <div className='w-full flex flex-col items-center justify-center gap-3 mt-20'>
-            <div>
+            <div className='leading-normal'>
               {"JASON SUGIHARTO".split("").map((letter, i) => (
                 <motion.span 
                 key={i}
@@ -47,7 +47,7 @@ const Hero = () => {
                   delay: STAGGER * i,
                   ease: "easeInOut"
                 }}
-                className='xl:text-[8rem] lg:text-[6rem] md:text-[5rem] sm:text-[3rem] text-[3rem] font-pop tracking-tighter mt-6 text-secondary font-medium'>
+                className='xl:text-[8rem] lg:text-[6rem] md:text-[5rem] sm:text-[3rem] text-[3rem] font-pop tracking-tighter mt-6 text-secondary font-medium leading-none md:leading-normal'>
                   {letter}
                 </motion.span>
               ))}
@@ -63,7 +63,7 @@ const Hero = () => {
                   <p className='lg:text-lg text-md text-third tracking-tighter'>Crafting sleek, responsive front-end experiences that turn ideas into interactive, user-friendly interfaces. Every pixel matters, and every line of code drives results.</p>
                 </div>
               </motion.div>
-              <div className='md:col-span-4 col-span-3 flex justify-center md:items-start items-center rounded-xl'>
+              <div className='md:col-span-4 col-span-3 flex justify-center md:items-start items-center md:rounded-xl'>
                 <motion.img layoutId='main-image' transition={{ease: [0.6, 0.01, -0.05, 0.9], duration: 1.3}} className='object-contain h-[250px] bg-inherit rounded-xl' src="./myhero.png"/>
               </div>
               <motion.div 
