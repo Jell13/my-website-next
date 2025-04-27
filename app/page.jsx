@@ -16,28 +16,24 @@ function App() {
   
   const[loading, setLoading] = useState(true)
 
+  const handleAnimationComplete = () => {
+    setLoading(false);
+  };
+  
   return (
     <>
-
-      <AnimatePresence>
-      {loading ? (
-        <motion.div>
-          <Loader setLoading={setLoading}/>
-        </motion.div>
-      ) : (
-        <>
-          <ReactLenis root>
-            <NavBar/>
-            <Hero/>
-            <Services/>
-            <Works/>
-            <About/>
-            <Contact/>
-            <Footer/>
-          </ReactLenis>
-        </>
-      )}
-      </AnimatePresence>
+      {loading && <Loader onComplete={(handleAnimationComplete)}/>}
+      <div className={`transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+        <ReactLenis root>
+          <NavBar/>
+          <Hero/>
+          <Services/>
+          <Works/>
+          <About/>
+          <Contact/>
+          <Footer/>
+        </ReactLenis>
+      </div>
     </>
   )
 }

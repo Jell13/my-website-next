@@ -56,7 +56,7 @@ const Hero = () => {
               <motion.div 
               initial={{opacity: 0}}
               animate={{opacity: 1, transition:{
-                duration: 1.3
+                duration: 2
               }}}
               className='flex col-span-4 flex-col justify-center items-center'>
                 <div className='md:w-[30ch]'>
@@ -64,12 +64,13 @@ const Hero = () => {
                 </div>
               </motion.div>
               <div className='md:col-span-4 col-span-3 flex justify-center md:items-start items-center md:rounded-xl'>
-                <motion.img layoutId='main-image' transition={{ease: [0.6, 0.01, -0.05, 0.9], duration: 1.3}} className='object-contain h-[250px] bg-inherit rounded-xl' src="./myhero.png"/>
+                {/* <motion.img layoutId='main-image' transition={{ease: [0.6, 0.01, -0.05, 0.9], duration: 1.3}} className='object-contain h-[250px] bg-inherit rounded-xl' src="./myhero.png"/> */}
+                <img src="./myhero.png" alt="" className='object-contain h-[250px] bg-inherit rounded-xl'/>
               </div>
               <motion.div 
               initial={{opacity: 0}}
               animate={{opacity: 1, transition:{
-                duration: 1.3
+                duration: 2
               }}}
               className='flex flex-col items-end md:col-span-4 col-span-3 col-start- justify-end'>
                 <div className=''>
